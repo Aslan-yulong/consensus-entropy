@@ -4,14 +4,24 @@
 [![Python](https://img.shields.io/pypi/pyversions/consensus-entropy)](https://pypi.org/project/consensus-entropy/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Paper](https://img.shields.io/badge/arXiv-2504.11101-b31b1b.svg)](https://arxiv.org/abs/2504.11101)
+[![Project Page](https://img.shields.io/badge/Project-Page-6f42c1.svg)](https://tianyilt.github.io/consensus-entropy/)
 
 Official implementation of **Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR**.
 
 Consensus Entropy is a lightweight Python package for measuring agreement among multiple OCR predictions. Given several candidate strings from different vision-language models, OCR engines, or decoding runs, it assigns each candidate a consensus-entropy score based on normalized string disagreement. Lower scores indicate stronger agreement with the candidate set and can be used as a simple, model-agnostic confidence signal for OCR verification and result selection.
 
+## Links
+
+- **Project page**: https://tianyilt.github.io/consensus-entropy/
+- **Paper**: https://arxiv.org/abs/2504.11101
+- **Code demo**: [`Code_Demo_CE_Ensemble_and_Filtering/`](Code_Demo_CE_Ensemble_and_Filtering/)
+- **PyPI package**: https://pypi.org/project/consensus-entropy/
+- **Human-labeled OCR dataset**: to be added once the public Hugging Face dataset card is confirmed.
+
 ## News
 
 - **2026-05** — Our paper **Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR** has been accepted to **CVPR 2026**. 🎉
+- **2026-05** — Project page and supplementary code demo released.
 - **2025-04** — Paper released on arXiv: [arXiv:2504.11101](https://arxiv.org/abs/2504.11101).
 
 ## Highlights
@@ -103,6 +113,25 @@ Returns the candidate with the lowest consensus-entropy score.
 
 - **Input**: a list of at least two strings.
 - **Output**: `(best_result, best_score)`.
+
+## Supplementary Demo
+
+The supplementary material includes a compact OCRBench demo for CE filtering and CE-based multi-model ensembling. It consumes VLMEvalKit-style OCRBench Excel outputs and produces JSON/XLSX analysis files.
+
+```bash
+cd Code_Demo_CE_Ensemble_and_Filtering
+pip install pandas Levenshtein numpy openpyxl
+
+# CE threshold analysis
+python cal_avg_scores_CE_thresholds.py   ./samples/InternVL2_5-8B_OCRBench.xlsx   ./samples/Qwen2-VL-7B-Instruct_OCRBench.xlsx   -o ./res_avg_scores_CE/test.json
+
+# CE-based multi-model ensemble
+python ensemble_consensus_entropy_from_xlsx.py   ./samples/InternVL2_5-8B_OCRBench.xlsx   ./samples/Qwen2-VL-7B-Instruct_OCRBench.xlsx   ./samples/Qwen2.5-VL-7B_OCRBench.xlsx   -o ./res_ensemble/
+```
+
+## Dataset
+
+We also maintain a human-labeled OCR evaluation dataset used for validating Consensus Entropy against human quality judgments. The public Hugging Face link will be added here once the dataset card is confirmed.
 
 ## When to Use Consensus Entropy
 

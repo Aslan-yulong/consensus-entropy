@@ -1,0 +1,86 @@
+{
+  "InternVL2_5-8B_OCRBench": [
+    {
+      "threshold": 1.0,
+      "accuracy": 0.821
+    },
+    {
+      "threshold": 0.9,
+      "accuracy": 0.8441422594142259
+    },
+    {
+      "threshold": 0.8,
+      "accuracy": 0.8551502145922747
+    },
+    {
+      "threshold": 0.7,
+      "accuracy": 0.8648351648351649
+    },
+    {
+      "threshold": 0.6,
+      "accuracy": 0.8730337078651685
+    },
+    {
+      "threshold": 0.5,
+      "accuracy": 0.8858823529411765
+    },
+    {
+      "threshold": 0.4,
+      "accuracy": 0.9089726918075423
+    },
+    {
+      "threshold": 0.3,
+      "accuracy": 0.9266304347826086
+    },
+    {
+      "threshold": 0.2,
+      "accuracy": 0.9432624113475178
+    },
+    {
+      "threshold": 0.1,
+      "accuracy": 0.9652996845425867
+    }
+  ],
+  "Qwen2-VL-7B-Instruct_OCRBench": [
+    {
+      "threshold": 1.0,
+      "accuracy": 0.843
+    },
+    {
+      "threshold": 0.9,
+      "accuracy": 0.8514644351464435
+    },
+    {
+      "threshold": 0.8,
+      "accuracy": 0.8594420600858369
+    },
+    {
+      "threshold": 0.7,
+      "accuracy": 0.8725274725274725
+    },
+    {
+      "threshold": 0.6,
+      "accuracy": 0.8797752808988764
+    },
+    {
+      "threshold": 0.5,
+      "accuracy": 0.8952941176470588
+    },
+    {
+      "threshold": 0.4,
+      "accuracy": 0.9128738621586476
+    },
+    {
+      "threshold": 0.3,
+      "accuracy": 0.9266304347826086
+    },
+    {
+      "threshold": 0.2,
+      "accuracy": 0.9460992907801419
+    },
+    {
+      "threshold": 0.1,
+      "accuracy": 0.9716088328075709
+    }
+  ]
+}

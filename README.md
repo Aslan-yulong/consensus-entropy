@@ -16,7 +16,7 @@ Consensus Entropy is a lightweight Python package for measuring agreement among 
 - **Paper**: https://arxiv.org/abs/2504.11101
 - **Code demo**: [`Code_Demo_CE_Ensemble_and_Filtering/`](Code_Demo_CE_Ensemble_and_Filtering/)
 - **PyPI package**: https://pypi.org/project/consensus-entropy/
-- **Human-labeled OCR dataset**: to be added once the public Hugging Face dataset card is confirmed.
+- **Human-labeled OCR dataset**: https://huggingface.co/datasets/Aslan-mingye/OCR-Quality
 
 ## News
 
@@ -131,7 +131,7 @@ python ensemble_consensus_entropy_from_xlsx.py   ./samples/InternVL2_5-8B_OCRBen
 
 ## Dataset
 
-We also maintain a human-labeled OCR evaluation dataset used for validating Consensus Entropy against human quality judgments. The public Hugging Face link will be added here once the dataset card is confirmed.
+We also maintain a human-labeled OCR evaluation dataset used for validating Consensus Entropy against human quality judgments. The dataset is publicly available on Hugging Face: [Aslan-mingye/OCR-Quality](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality).
 
 ## When to Use Consensus Entropy
 

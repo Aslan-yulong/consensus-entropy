@@ -9,7 +9,6 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-6f42c1.svg)](https://tianyilt.github.io/consensus-entropy/)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-OCR--Quality-yellow)](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality)
 [![PyPI](https://img.shields.io/pypi/v/consensus-entropy?color=blue)](https://pypi.org/project/consensus-entropy/)
-[![Python](https://img.shields.io/pypi/pyversions/consensus-entropy)](https://pypi.org/project/consensus-entropy/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [**Project Page**](https://tianyilt.github.io/consensus-entropy/) |

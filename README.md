@@ -1,22 +1,33 @@
+<div align="center">
+
 # Consensus Entropy
 
-[![PyPI](https://img.shields.io/pypi/v/consensus-entropy?color=blue)](https://pypi.org/project/consensus-entropy/)
-[![Python](https://img.shields.io/pypi/pyversions/consensus-entropy)](https://pypi.org/project/consensus-entropy/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+### Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR
+
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue)](https://cvpr.thecvf.com/Conferences/2026)
 [![Paper](https://img.shields.io/badge/arXiv-2504.11101-b31b1b.svg)](https://arxiv.org/abs/2504.11101)
 [![Project Page](https://img.shields.io/badge/Project-Page-6f42c1.svg)](https://tianyilt.github.io/consensus-entropy/)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-OCR--Quality-yellow)](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality)
+[![PyPI](https://img.shields.io/pypi/v/consensus-entropy?color=blue)](https://pypi.org/project/consensus-entropy/)
+[![Python](https://img.shields.io/pypi/pyversions/consensus-entropy)](https://pypi.org/project/consensus-entropy/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Official implementation of **Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR**.
+[**Project Page**](https://tianyilt.github.io/consensus-entropy/) |
+[**Paper**](https://arxiv.org/abs/2504.11101) |
+[**Dataset**](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality) |
+[**PyPI**](https://pypi.org/project/consensus-entropy/) |
+[**Code Demo**](Code_Demo_CE_Ensemble_and_Filtering/) |
+[**Citation**](#citation)
 
-Consensus Entropy is a lightweight Python package for measuring agreement among multiple OCR predictions. Given several candidate strings from different vision-language models, OCR engines, or decoding runs, it assigns each candidate a consensus-entropy score based on normalized string disagreement. Lower scores indicate stronger agreement with the candidate set and can be used as a simple, model-agnostic confidence signal for OCR verification and result selection.
+</div>
 
-## Links
+Official implementation of **Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR**, accepted by **CVPR 2026**.
 
-- **Project page**: https://tianyilt.github.io/consensus-entropy/
-- **Paper**: https://arxiv.org/abs/2504.11101
-- **Code demo**: [`Code_Demo_CE_Ensemble_and_Filtering/`](Code_Demo_CE_Ensemble_and_Filtering/)
-- **PyPI package**: https://pypi.org/project/consensus-entropy/
-- **Human-labeled OCR dataset**: https://huggingface.co/datasets/Aslan-mingye/OCR-Quality
+Consensus Entropy is a lightweight, model-agnostic signal for measuring agreement among multiple OCR predictions. Given several candidate strings from different vision-language models, OCR engines, or decoding runs, it assigns each candidate a consensus-entropy score based on normalized string disagreement. Lower scores indicate stronger agreement with the candidate set and can be used for OCR verification, result selection, filtering, and multi-model ensembling.
+
+<p align="center">
+  <img src="assets/framework.png" width="90%" alt="Consensus Entropy OCR framework">
+</p>
 
 ## News
 
@@ -28,9 +39,15 @@ Consensus Entropy is a lightweight Python package for measuring agreement among 
 
 - **Self-verifying OCR signal**: estimate which OCR result is most consistent with a group of candidates.
 - **Model-agnostic**: works with outputs from any OCR system or vision-language model.
-- **Minimal dependency footprint**: small Python package built around normalized Levenshtein distance.
-- **Multilingual text support**: applicable to English, Chinese, and other Unicode strings.
+- **Training-free and lightweight**: no extra labels or model training required; implemented as a compact Python package.
+- **Filtering and ensembling**: supports CE-based answer filtering and multi-model OCR ensembling in the released demo.
+- **Human-labeled evaluation data**: public OCR quality dataset available on [Hugging Face](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality).
 - **Simple API**: compute per-candidate scores or directly retrieve the best OCR result.
+
+<p align="center">
+  <img src="assets/entropy-behavior.png" width="44%" alt="Consensus entropy behavior">
+  <img src="assets/threshold-performance.png" width="44%" alt="CE threshold performance">
+</p>
 
 ## Installation
 
@@ -131,7 +148,13 @@ python ensemble_consensus_entropy_from_xlsx.py   ./samples/InternVL2_5-8B_OCRBen
 
 ## Dataset
 
-We also maintain a human-labeled OCR evaluation dataset used for validating Consensus Entropy against human quality judgments. The dataset is publicly available on Hugging Face: [Aslan-mingye/OCR-Quality](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality).
+We release the human-labeled OCR quality dataset used to validate whether Consensus Entropy aligns with human quality judgments.
+
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Aslan--mingye%2FOCR--Quality-yellow)](https://huggingface.co/datasets/Aslan-mingye/OCR-Quality)
+
+- **Hugging Face**: https://huggingface.co/datasets/Aslan-mingye/OCR-Quality
+- **Purpose**: evaluate OCR correctness, calibration, and agreement-based verification against human quality labels.
+- **Use case**: benchmarking CE-style confidence signals and OCR/VLM result selection methods.
 
 ## When to Use Consensus Entropy
 

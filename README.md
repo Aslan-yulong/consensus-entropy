@@ -4,6 +4,12 @@
 
 ### Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR
 
+Yulong Zhang<sup>1,2,3,*,†</sup>, Tianyi Liang<sup>2,4,*</sup>, Xinyue Huang<sup>5</sup>, Erfei Cui<sup>2,3</sup>, Guoqing Wang<sup>4</sup>, Xu Guo<sup>1,2</sup>, Chenhui Li<sup>4</sup>, Gongshen Liu<sup>3,†</sup>
+
+<sup>1</sup>Fudan University · <sup>2</sup>Shanghai Innovation Institute · <sup>3</sup>Shanghai Jiao Tong University · <sup>4</sup>East China Normal University · <sup>5</sup>Sun Yat-sen University
+
+<sup>*</sup>Equal contribution · <sup>†</sup>Corresponding authors
+
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue)](https://cvpr.thecvf.com/Conferences/2026)
 [![Paper](https://img.shields.io/badge/arXiv-2504.11101-b31b1b.svg)](https://arxiv.org/abs/2504.11101)
 [![Project Page](https://img.shields.io/badge/Project-Page-6f42c1.svg)](https://tianyilt.github.io/consensus-entropy/)
@@ -185,7 +191,7 @@ If you find this project useful, please cite our paper:
 ```bibtex
 @misc{zhang2025consensusentropyharnessingmultivlm,
       title={Consensus Entropy: Harnessing Multi-VLM Agreement for Self-Verifying and Self-Improving OCR},
-      author={Yulong Zhang and Tianyi Liang and Xinyue Huang and Erfei Cui and Xu Guo and Pei Chu and Chenhui Li and Ru Zhang and Wenhai Wang and Gongshen Liu},
+      author={Yulong Zhang and Tianyi Liang and Xinyue Huang and Erfei Cui and Guoqing Wang and Xu Guo and Chenhui Li and Gongshen Liu},
       year={2025},
       eprint={2504.11101},
       archivePrefix={arXiv},
